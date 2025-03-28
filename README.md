@@ -1,23 +1,25 @@
-# Datapack skeleton
+# No Windswept Biomes
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+No Windswept Biomes is a Minecraft datapack that replaces the generation of all windswept biomes (Windswept Hills, Forest, Gravelly Hills, and Savanna). These biomes often create chaotic terrain with floating blocks, broken trees, and unnatural slopes — this pack removes them for a cleaner, more consistent world generation experience.
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Replaces generation of the following biomes:
+  - Windswept Hills => Plains
+  - Windswept Gravelly Hills => Plains
+  - Windswept Forest => Forest
+  - Windswept Savanna => Savanna
+- Affects only new chunk generation
+- No other terrain or biome types are modified
 
 ## Installation
 
-- Download the [datapack and resourcepack](https://github.com/Neluxx/datapack-skeleton/releases/latest)
+- Download the [datapack](https://github.com/Neluxx/no-windswept-biomes/releases/latest)
 - Move the datapack inside ``.minecraft/saves/<world>/datapacks`` ([How to find .minecraft?](https://minecraft.wiki/w/.minecraft#Locating))
-- Move the resourcepack inside ``.minecraft/resourcepacks`` ([How to load a resourcepack?](https://minecraft.wiki/w/Resource_pack#Behavior))
 - Reload the world or run ``/reload``
 
 ## Uninstalling
 
 - Delete the datapack from ``.minecraft/saves/<world>/datapacks``
-- Delete the resourcepack from ``.minecraft/resourcepacks``
 
-> **_NOTE:_** An optional note
+> **_NOTE:_** Future terrain generation may include windswept biomes again
