@@ -1,4 +1,4 @@
-name: Create release with ZIP files for datapack and resourcepack
+name: Create release with ZIP file for datapack
 
 on:
   push:
@@ -21,10 +21,9 @@ jobs:
       - name: Set repository name
         run: echo "REPOSITORY=${GITHUB_REPOSITORY##*/}" >> $GITHUB_ENV
 
-      - name: Create ZIP files
+      - name: Create ZIP file
         run: |
-          cd datapack && zip -r ../${{ env.REPOSITORY }}-datapack-${{ env.TAG }}.zip * && cd ..
-          cd resourcepack && zip -r ../${{ env.REPOSITORY }}-resourcepack-${{ env.TAG }}.zip * && cd ..
+          cd datapack && zip -r ../${{ env.REPOSITORY }}-datapack-${{ env.TAG }}.zip *
 
       - name: Create release
         uses: softprops/action-gh-release@v2
@@ -34,7 +33,6 @@ jobs:
           prerelease: false
           files: |
             ${{ env.REPOSITORY }}-datapack-${{ env.TAG }}.zip
-            ${{ env.REPOSITORY }}-resourcepack-${{ env.TAG }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
